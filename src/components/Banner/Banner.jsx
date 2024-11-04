@@ -2,7 +2,7 @@ import bannerImg from '/banner.jpg'
 
 const Banner = () => {
     return (
-        <div>
+        <div className='bg-gray-100'>
             <div className="mx-5 rounded-[32px] bg-primPink grid gap-10 justify-center pt-32 pb-40 md:pb-64 px-5 relative bottom-16">
                 <h2 className="text-white text-2xl md:text-6xl font-bold text-center max-w-6xl">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h2>
                 <p className="text-white text-sm md:text-base text-center max-w-3xl mx-auto">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
