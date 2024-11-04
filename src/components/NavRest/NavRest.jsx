@@ -43,7 +43,7 @@ const NavRest = () => {
   );
 
   return (
-    <nav className="flex items-center justify-between my-6 mx-5">
+    <nav className="flex items-center justify-between mx-auto px-5 py-6 max-w-7xl">
       <div className="md:hidden">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

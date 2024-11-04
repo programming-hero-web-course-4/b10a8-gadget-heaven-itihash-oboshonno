@@ -43,7 +43,7 @@ const NavHome = () => {
   );
 
   return (
-    <nav className="flex items-center justify-between my-6 mx-8 relative top-8 z-10">
+    <nav className="flex items-center justify-between my-6 mx-auto px-8 relative top-8 z-10 max-w-7xl">
       <div className="md:hidden">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

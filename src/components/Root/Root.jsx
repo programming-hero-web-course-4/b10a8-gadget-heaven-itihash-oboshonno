@@ -4,10 +4,10 @@ import Navbar from "../Navbar/Navbar";
 const Root = () => {
   return (
     <>
-      <div className="max-w-7xl mx-auto">
-        <Navbar></Navbar>
+      <Navbar></Navbar>
+      <div className="bg-gray-50">
+        <Outlet></Outlet>
       </div>
-      <Outlet></Outlet>
     </>
   );
 };
