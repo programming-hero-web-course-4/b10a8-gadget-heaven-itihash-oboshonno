@@ -1,12 +1,12 @@
 [
   {
-    "product_id": "101",
+    "product_id": 101,
     "product_title": "Wireless Bluetooth Headphones",
     "product_image": "https://i.ibb.co.com/jvKw4QP/Wireless-Bluetooth-Headphones-JBL.jpg",
     "category": "Accessories",
     "price": 59.99,
     "description": "High-quality wireless headphones with noise-cancellation and long battery life.",
-    "Specification": [
+    "specification": [
       "Bluetooth 5.0",
       "Noise Cancelling",
       "Up to 20 hours battery life",
@@ -16,13 +16,13 @@
     "rating": 4.5
   },
   {
-    "product_id": "102",
+    "product_id": 102,
     "product_title": "Smart LED TV 55 inch",
     "product_image": "https://i.ibb.co.com/fYJ2wxk/Smart-LED-TV-55-inch.png",
     "category": "Televisions",
     "price": 499.99,
     "description": "55-inch 4K Ultra HD LED Smart TV with HDR support.",
-    "Specification": [
+    "specification": [
       "4K UHD resolution",
       "HDR10 support",
       "Smart TV with apps",
@@ -32,13 +32,13 @@
     "rating": 4.7
   },
   {
-    "product_id": "104",
+    "product_id": 104,
     "product_title": "Office Chair Ergonomic Design",
     "product_image": "https://i.ibb.co.com/pxRwRQC/Office-Chair-Ergonomic-Design.jpg",
     "category": "Accessories",
     "price": 129.99,
     "description": "Ergonomic office chair with lumbar support and adjustable height.",
-    "Specification": [
+    "specification": [
       "Adjustable armrests",
       "Breathable mesh back",
       "360-degree swivel",
@@ -48,13 +48,13 @@
     "rating": 4.1
   },
   {
-    "product_id": "105",
+    "product_id": 105,
     "product_title": "Samsung Galaxy S9",
     "product_image": "https://i.ibb.co.com/GsPYkkT/Smartphone-128-GB.jpg",
     "category": "Phones",
     "price": 699.99,
     "description": "Fast smartphone with advanced features and high-resolution camera.",
-    "Specification": [
+    "specification": [
       "128GB storage",
       "12MP dual camera",
       "OLED display",
@@ -64,13 +64,13 @@
     "rating": 4.8
   },
   {
-    "product_id": "107",
+    "product_id": 107,
     "product_title": "Gaming Keyboard Mechanical RGB",
     "product_image": "https://i.ibb.co.com/ZMjVrWN/Gaming-Keyboard-Mechanical-RGB.jpg",
     "category": "Accessories",
     "price": 89.99,
     "description": "Mechanical gaming keyboard with customizable RGB lighting and responsive keys.",
-    "Specification": [
+    "specification": [
       "RGB backlighting",
       "Cherry MX switches",
       "Anti-ghosting keys",
@@ -80,13 +80,13 @@
     "rating": 4.6
   },
   {
-    "product_id": "108",
+    "product_id": 108,
     "product_title": "Air Purifier with HEPA Filter",
     "product_image": "https://i.ibb.co.com/M2kXbgL/Air-Purifier-with-HEPA-Filter.jpg",
     "category": "Appliances",
     "price": 159.99,
     "description": "High-efficiency air purifier with HEPA filter and quiet operation.",
-    "Specification": [
+    "specification": [
       "Removes 99.97% of particles",
       "3-speed fan control",
       "Filter change indicator",
@@ -96,13 +96,13 @@
     "rating": 4.4
   },
   {
-    "product_id": "110",
+    "product_id": 110,
     "product_title": "Electric Scooter with LED Display",
     "product_image": "https://i.ibb.co.com/MfyxvRf/Electric-Scooter-with-LED-Display.jpg",
     "category": "Vehicles",
     "price": 699.99,
     "description": "Lightweight electric scooter with LED display and extended battery life.",
-    "Specification": [
+    "specification": [
       "Max speed: 60 mph",
       "Range: 300 miles per charge",
       "LED display",
@@ -112,13 +112,13 @@
     "rating": 4.7
   },
   {
-    "product_id": "111",
+    "product_id": 111,
     "product_title": "High-Resolution 4K Monitor",
     "product_image": "https://i.ibb.co.com/VmBP4Xk/High-Resolution-4-K-Monitor.jpg",
     "category": "Accessories",
     "price": 329.99,
     "description": "27-inch 4K UHD monitor with ultra-thin bezels and vibrant color display.",
-    "Specification": [
+    "specification": [
       "4K UHD resolution",
       "IPS panel",
       "HDR10 support",
@@ -128,13 +128,13 @@
     "rating": 4.8
   },
   {
-    "product_id": "112",
+    "product_id": 112,
     "product_title": "Smart Thermostat with WiFi",
     "product_image": "https://i.ibb.co.com/kGBq9Z5/Smart-Thermostat-with-Wi-Fi.jpg",
     "category": "Appliances",
     "price": 149.99,
     "description": "Smart thermostat with WiFi connectivity, energy-saving features, and app control.",
-    "Specification": [
+    "specification": [
       "WiFi-enabled",
       "App and voice control",
       "Energy-saving modes",
@@ -144,13 +144,13 @@
     "rating": 4.6
   },
   {
-    "product_id": "113",
+    "product_id": 113,
     "product_title": "Cordless Vacuum Cleaner",
     "product_image": "https://i.ibb.co.com/7GK49nM/Cordless-Vacuum-Cleaner.jpg",
     "category": "Appliances",
     "price": 199.99,
     "description": "Lightweight cordless vacuum with powerful suction and multi-surface cleaning.",
-    "Specification": [
+    "specification": [
       "Powerful suction",
       "Up to 40 minutes of runtime",
       "Multi-surface cleaning",
@@ -160,13 +160,13 @@
     "rating": 4.5
   },
   {
-    "product_id": "114",
+    "product_id": 114,
     "product_title": "Portable Laptop with 8GB RAM",
     "product_image": "https://i.ibb.co.com/s9wq6N0/Portable-Laptop-with-8-GB-RAM.jpg",
     "category": "Laptops",
     "price": 1149.99,
     "description": "Slim and lightweight laptop with 8GB RAM and SSD storage for fast performance.",
-    "Specification": [
+    "specification": [
       "8GB RAM",
       "256GB SSD",
       "15.6-inch display",
@@ -176,13 +176,13 @@
     "rating": 4.3
   },
   {
-    "product_id": "115",
+    "product_id": 115,
     "product_title": "Automatic Espresso Machine",
     "product_image": "https://i.ibb.co.com/jfB1JM1/Automatic-Espresso-Machine.jpg",
     "category": "Appliances",
     "price": 299.99,
     "description": "Fully automatic espresso machine with milk frother for perfect coffee drinks.",
-    "Specification": [
+    "specification": [
       "Built-in milk frother",
       "One-touch operation",
       "Adjustable grind settings",
@@ -192,13 +192,13 @@
     "rating": 4.7
   },
   {
-    "product_id": "116",
+    "product_id": 116,
     "product_title": "Ultrabook with Touchscreen",
     "product_image": "https://i.ibb.co.com/YbQDRCC/Ultrabook-with-Touchscreen.jpg",
     "category": "Laptops",
     "price": 1499.99,
     "description": "Slim and portable ultrabook with a 14-inch touchscreen and long battery life.",
-    "Specification": [
+    "specification": [
       "Intel Core i7",
       "16GB RAM",
       "512GB SSD",
@@ -209,13 +209,13 @@
     "rating": 4.6
   },
   {
-    "product_id": "117",
+    "product_id": 117,
     "product_title": "Gaming Laptop with RTX Graphics",
     "product_image": "https://i.ibb.co.com/vB502f3/Gaming-Laptop-with-RTX-Graphics.jpg",
     "category": "Laptops",
     "price": 1799.99,
     "description": "High-performance gaming laptop with NVIDIA RTX graphics and RGB keyboard.",
-    "Specification": [
+    "specification": [
       "Intel Core i7",
       "16GB RAM",
       "1TB SSD",
@@ -226,13 +226,13 @@
     "rating": 4.8
   },
   {
-    "product_id": "118",
+    "product_id": 118,
     "product_title": "Business Laptop with Security Features",
     "product_image": "https://i.ibb.co.com/L05KVF9/Business-Laptop-with-Security-Features.jpg",
     "category": "Laptops",
     "price": 1099.99,
     "description": "Secure and efficient laptop with fingerprint reader and long battery life for business use.",
-    "Specification": [
+    "specification": [
       "AMD Ryzen 5",
       "8GB RAM",
       "256GB SSD",
@@ -243,13 +243,13 @@
     "rating": 4.5
   },
   {
-    "product_id": "119",
+    "product_id": 119,
     "product_title": "2-in-1 Convertible Laptop",
     "product_image": "https://i.ibb.co.com/dMLbwZn/2-in-1-Convertible-Laptop.jpg",
     "category": "Laptops",
     "price": 749.99,
     "description": "Convertible laptop that can be used as a tablet, ideal for creative professionals.",
-    "Specification": [
+    "specification": [
       "Intel Core i5",
       "8GB RAM",
       "256GB SSD",
@@ -260,13 +260,13 @@
     "rating": 4.3
   },
   {
-    "product_id": "120",
+    "product_id": 120,
     "product_title": "Student Laptop with Long Battery Life",
     "product_image": "https://i.ibb.co.com/yBt6DfC/Student-Laptop-with-Long-Battery-Life.jpg",
     "category": "Laptops",
     "price": 549.99,
     "description": "Affordable laptop with long battery life, perfect for students and daily tasks.",
-    "Specification": [
+    "specification": [
       "Intel Core i3",
       "4GB RAM",
       "128GB SSD",
@@ -277,13 +277,13 @@
     "rating": 4.2
   },
   {
-    "product_id": "121",
+    "product_id": 121,
     "product_title": "55-Inch 4K UHD Smart Television",
     "product_image": "https://i.ibb.co.com/qpJK36K/55-Inch-4-K-UHD-Smart-Television.png",
     "category": "Televisions",
     "price": 499.99,
     "description": "55-inch 4K UHD smart TV with HDR and built-in streaming apps for immersive viewing.",
-    "Specification": [
+    "specification": [
       "4K UHD resolution",
       "HDR10 support",
       "Smart TV with streaming apps",
@@ -294,13 +294,13 @@
     "rating": 4.7
   },
   {
-    "product_id": "122",
+    "product_id": 122,
     "product_title": "OnePlus 10 Pro",
     "product_image": "https://i.ibb.co.com/nj4pX0K/5-G-Smartphone-with-Triple-Camera.png",
     "category": "Phones",
     "price": 699.99,
     "description": "High-performance 5G smartphone with triple-lens camera and fast charging.",
-    "Specification": [
+    "specification": [
       "6.5-inch OLED display",
       "128GB storage",
       "5G connectivity",
@@ -311,13 +311,13 @@
     "rating": 4.5
   },
   {
-    "product_id": "123",
+    "product_id": 123,
     "product_title": "Electric Scooter with Long Range",
     "product_image": "https://i.ibb.co.com/c1nxQCM/Electric-Scooter-with-Long-Range.jpg",
     "category": "Vehicles",
     "price": 799.99,
     "description": "Eco-friendly electric scooter with extended range and LED lights.",
-    "Specification": [
+    "specification": [
       "Max speed: 35 mph",
       "Range: 70 miles per charge",
       "LED headlight and taillight",

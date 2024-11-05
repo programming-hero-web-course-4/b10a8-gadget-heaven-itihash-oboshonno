@@ -13,14 +13,14 @@ const Product = ({ product }) => {
         />
       </div>
       <div>
-        <h6 className="font-semibold text-2xl text-primBlack">{product_title}</h6>
+        <h6 className="font-semibold text-xl text-primBlack">{product_title}</h6>
       </div>
       <div>
         <p className="font-medium text-xl text-primBlack opacity-60">{price}<span>$</span></p>
       </div>
       <div>
-        <Link to={`/products/${product_id}`}>
-            <button className="text-lg font-semibold px-6 py-3 rounded-full border-2 border-primPink text-primPink hover:border-2 hover:border-primPink hover:bg-primPink hover:text-white">View Details</button>
+        <Link to={`/product/${product_id}`}>
+            <button className="text-lg font-semibold px-6 py-2 rounded-full border-2 border-primPink text-primPink hover:border-2 hover:border-primPink hover:bg-primPink hover:text-white transition-colors">View Details</button>
         </Link>
       </div>
     </div>
