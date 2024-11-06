@@ -8,12 +8,11 @@ const theCartIdHolder = () => {
     }
 }
 
-const addingIdToReadList = (id) => {
+const addingIdToCart = (id) => {
     const existingList = theCartIdHolder();
     existingList.push(id);
     const storedListStr = JSON.stringify(existingList);
     localStorage.setItem('cart', storedListStr);
-    alert("Item Added to your Cart")
 }
 
 const theWishListIdHolder = () => {
@@ -34,10 +33,39 @@ const addingIdtoWishList = (id) => {
         existingList.push(id);
         const storedListStr = JSON.stringify(existingList);
         localStorage.setItem('wish-list', storedListStr);
-        alert("Added Item to your Wishlist")
     }
     
 }
 
+const removingIdFromCart = (id) => {
+    const checkCartStr = localStorage.getItem('cart');
+    const checkCart = JSON.parse(checkCartStr);
+    if (checkCart.includes(id)) {
+        const index = checkCart.indexOf(id);
+        if (index > -1) {
+            checkCart.splice(index, 1);
+            const storedListStr = JSON.stringify(checkCart);
+            localStorage.setItem('cart', storedListStr);
+        }
+    }
+}
 
-export { addingIdToReadList, addingIdtoWishList, theCartIdHolder, theWishListIdHolder }
+const removingIdFromWishList = (id) => {
+    const checkWishStr = localStorage.getItem('wish-list');
+    const checkWish = JSON.parse(checkWishStr);
+    if (checkWish.includes(id)) {
+        const index = checkWish.indexOf(id);
+        if (index > -1) {
+            checkWish.splice(index, 1);
+            const storedListStr = JSON.stringify(checkWish);
+            localStorage.setItem('wish-list', storedListStr);
+        }
+    }
+}
+
+const disableOnClick = (event) => {
+    event.target.disabled = true;
+}
+
+
+export { addingIdToCart, addingIdtoWishList, theCartIdHolder, theWishListIdHolder, removingIdFromCart, removingIdFromWishList, disableOnClick }

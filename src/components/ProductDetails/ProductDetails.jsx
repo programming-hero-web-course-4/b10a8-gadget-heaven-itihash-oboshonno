@@ -1,8 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import InStock from "../InStock/InStock";
 import OutStock from "../OutStock/OutStock";
-import { addingIdToReadList, addingIdtoWishList } from "../Utility/addToLocal";
+import { addingIdToCart, addingIdtoWishList, disableOnClick } from "../Utility/addToLocal";
 import Stars from "../Rating/Rating";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import React from "react";
 
 const ProductDetails = () => {
   const { product_id } = useParams();
@@ -11,13 +14,37 @@ const ProductDetails = () => {
   const data = useLoaderData();
   const prodData = data.find((item) => item.product_id === id);
 
-  const handleAddToReadList = (id) => {
-    addingIdToReadList(id);
+  const handleAddToCart = (id) => {
+    addingIdToCart(id);
+    toast.success('Item Added to your Cart', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
   };
 
   const handleAddToWishList = (id) => {
     addingIdtoWishList(id);
+    toast.success('Added Item to your Wishlist', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
   };
+  
+  const handleDisabled = (event) => {
+    disableOnClick(event);
+  }
 
   const {
     product_image,
@@ -31,6 +58,18 @@ const ProductDetails = () => {
 
   return (
     <div>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      />
       <div className="bg-primPink pt-16 pb-80 text-white text-center grid gap-6 px-5">
         <h3 className="text-3xl font-bold">Product Details</h3>
         <p>
@@ -89,7 +128,7 @@ const ProductDetails = () => {
         "
             >
               <button
-                onClick={() => handleAddToReadList(id)}
+                onClick={() => handleAddToCart(id)}
                 className="flex gap-3 items-center text-lg font-semibold px-6 py-2 rounded-full border-2 border-primPink text-primPink hover:border-2 hover:border-primPink hover:bg-primPink hover:text-white transition-colors"
               >
                 <p>Add to Cart</p>
@@ -109,7 +148,7 @@ const ProductDetails = () => {
                 </svg>
               </button>
               <button
-                onClick={() => handleAddToWishList(id)}
+                onClick={(event) => {handleAddToWishList(id); handleDisabled(event)}}
                 className="bg-white text-pink-700 rounded-full p-2 border-2 border-primPink hover:bg-primPink hover:text-white transition-colors"
               >
                 <svg

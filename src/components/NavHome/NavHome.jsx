@@ -94,7 +94,7 @@ const NavHome = () => {
         <ul className="flex items-center gap-10">{navItems}</ul>
       </div>
       <div className="flex items-center gap-5">
-        <Link to="/dashboard">
+        <Link to="/dashboard/cart">
           <div>
             <div className="bg-white rounded-full p-2">
               <svg
@@ -117,7 +117,7 @@ const NavHome = () => {
             </div>
           </div>
         </Link>
-        <Link to="/dashboard">
+        <Link to="/dashboard/wishlist">
           <div>
             <div className="bg-white rounded-full p-2">
               <svg

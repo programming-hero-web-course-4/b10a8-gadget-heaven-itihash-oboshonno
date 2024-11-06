@@ -94,7 +94,7 @@ const NavRest = () => {
         <ul className="flex items-center gap-10">{navItems}</ul>
       </div>
       <div className="flex items-center gap-3">
-        <Link>
+        <Link to="/dashboard/cart">
           <div>
             <div className="bg-white rounded-full p-2 border">
               <svg
@@ -119,7 +119,7 @@ const NavRest = () => {
             </div>
           </div>
         </Link>
-        <Link>
+        <Link to="/dashboard/wishlist">
           <div>
             <div className="bg-white rounded-full p-2 border">
               <svg
