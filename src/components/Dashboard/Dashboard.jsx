@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div>

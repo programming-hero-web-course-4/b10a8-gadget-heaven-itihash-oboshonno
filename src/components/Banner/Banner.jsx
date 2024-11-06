@@ -1,6 +1,5 @@
 import bannerImg from '/banner.jpg'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Explore from '../Explore/Explore';
 
 const Banner = () => {
     return (

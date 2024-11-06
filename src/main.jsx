@@ -10,6 +10,8 @@ import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import CartItems from './components/CartItems/CartItems';
 import WishItems from './components/WishItems/WishItems';
+import ExploreBtns from './components/ExploreBtns/ExploreBtns';
+import ExploreCntnt from './components/ExploreCntnt/ExploreCntnt';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,19 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('/gadgetsData.json')
+        loader: () => fetch('../categories.json'),
+        children: [
+          {
+            path: '/',
+            element: <ExploreCntnt></ExploreCntnt>,
+            loader: () => fetch('../gadgetsData.json')
+          },
+          {
+            path: '/category/:category',
+            element: <ExploreCntnt></ExploreCntnt>,
+            loader: () => fetch('../gadgetsData.json')
+          }
+        ]
       },
       {
         path: "/statistics",
@@ -33,12 +47,12 @@ const router = createBrowserRouter([
           {
             path: "/dashboard/cart",
             element: <CartItems></CartItems>,
-            loader: () => fetch('/gadgetsData.json')
+            loader: () => fetch('../gadgetsData.json')
           },
           {
             path: "/dashboard/wishlist",
             element: <WishItems></WishItems>,
-            loader: () => fetch('/gadgetsData.json')
+            loader: () => fetch('../gadgetsData.json')
           }
         ]
       },
