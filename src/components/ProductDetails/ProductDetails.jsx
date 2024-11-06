@@ -18,11 +18,13 @@ const ProductDetails = () => {
 
   const [specificData, setSpecificData] = useState({});
   const [alreadyExists, setAlreadyExists] = useState(false);
+  const [specici, setSpecici] = useState([]);
 
   useEffect(() => {
     const singleData = data.find((item) => item.product_id === id);
     console.log(singleData);
     setSpecificData(singleData);
+    setSpecici(singleData.specification);
     const existingWishIds = theWishListIdHolder();
     const find = existingWishIds.find((jinish) => jinish === id);
     if (find) {
@@ -39,15 +41,7 @@ const ProductDetails = () => {
     setAlreadyExists(true);
   };
 
-  const {
-    product_image,
-    product_title,
-    price,
-    availability,
-    description,
-    specification,
-    rating,
-  } = specificData;
+  const { product_image, product_title, price, availability, description, rating, } = specificData;
 
   return (
     <div>
@@ -99,7 +93,7 @@ const ProductDetails = () => {
               <p className="font-bold text-lg">Specifications:</p>
               <div>
                 <ul className="grid gap-1">
-                  {specification.map((spec, index) => (
+                  {specici.map((spec, index) => (
                     <li key={index}>{spec}</li>
                   ))}
                 </ul>
@@ -171,5 +165,6 @@ const ProductDetails = () => {
     </div>
   );
 };
+
 
 export default ProductDetails;

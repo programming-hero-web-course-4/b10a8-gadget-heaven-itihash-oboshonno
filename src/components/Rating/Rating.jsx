@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 export default function Stars({rating}) {
 
-    const firstExample = {
+  const [gotRating, setGotRating] = useState(0);
+  useEffect(() => {
+    if (rating) {
+      setGotRating(rating);
+    } else {
+      console.log("hahaha mara khao");
+    }
+  }, [])
+
+    const myStars = {
         size: 30,
-        value: rating,
+        value: gotRating,
         edit: false
       };
 
     return (
       <div>
-        <ReactStars {...firstExample} />
+        <ReactStars {...myStars} />
       </div>
     );
   }
