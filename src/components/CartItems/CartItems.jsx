@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CartItem from "../CartItem/CartItem";
 import { removingIdFromCart, theCartIdHolder } from "../Utility/addToLocal";
 import { useLoaderData } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 const CartItems = () => {
   const allGadgets = useLoaderData();
@@ -26,6 +27,18 @@ const CartItems = () => {
 
   return (
     <>
+    <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      />
       <div>
         <div>
           <p className="text-2xl font-bold text-primBlack">Cart</p>
