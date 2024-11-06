@@ -13,6 +13,7 @@ const addingIdToReadList = (id) => {
     existingList.push(id);
     const storedListStr = JSON.stringify(existingList);
     localStorage.setItem('cart', storedListStr);
+    alert("Item Added to your Cart")
 }
 
 const theWishListIdHolder = () => {
@@ -33,6 +34,7 @@ const addingIdtoWishList = (id) => {
         existingList.push(id);
         const storedListStr = JSON.stringify(existingList);
         localStorage.setItem('wish-list', storedListStr);
+        alert("Added Item to your Wishlist")
     }
     
 }

@@ -6,7 +6,7 @@ const Navbar = () => {
   const location = useLocation();
   const atHomePage = location.pathname === "/";
 
-  return <>{atHomePage ? <NavHome></NavHome> : <NavRest className={"bg-white"}></NavRest>}</>;
+  return <>{atHomePage ? <NavHome></NavHome> : <NavRest className={"bg-white shadow-lg"}></NavRest>}</>;
 };
 
 export default Navbar;

@@ -112,8 +112,8 @@ const NavRest = () => {
                 />
               </svg>
             </div>
-            <div className={cartLength > 0 ? "relative bottom-10 left-3 md:bottom-12 md:left-4" : "hidden"}>
-              <p className="text-[#b62424] text-xs md:text-sm font-medium flex justify-center rounded-full">
+            <div className="relative bottom-10 left-3 md:bottom-12 md:left-4">
+              <p className={cartLength > 0 ? "text-[#b62424] text-xs md:text-sm font-medium bg-white flex justify-center rounded-full" : "text-transparent text-xs md:text-sm font-medium bg-transparent flex justify-center rounded-full"}>
                 {cartLength}
               </p>
             </div>
@@ -137,8 +137,8 @@ const NavRest = () => {
                 />
               </svg>
             </div>
-            <div className={wishListLength > 0 ? "relative bottom-10 left-3 md:bottom-12 md:left-4" : "hidden"}>
-              <p className="text-[#b62424] text-xs md:text-sm font-medium flex justify-center rounded-full">
+            <div className="relative bottom-10 left-3 md:bottom-12 md:left-4">
+              <p className={wishListLength > 0 ? "text-[#b62424] text-xs md:text-sm font-medium bg-white flex justify-center rounded-full" : "text-transparent text-xs md:text-sm font-medium bg-transparent flex justify-center rounded-full"}>
                 {wishListLength}
               </p>
             </div>
