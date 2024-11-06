@@ -1,50 +1,43 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import InStock from "../InStock/InStock";
 import OutStock from "../OutStock/OutStock";
-import { addingIdToCart, addingIdtoWishList, disableOnClick } from "../Utility/addToLocal";
+import {
+  addingIdToCart,
+  addingIdtoWishList,
+  theWishListIdHolder,
+} from "../Utility/addToLocal";
 import Stars from "../Rating/Rating";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ProductDetails = () => {
   const { product_id } = useParams();
   const id = parseInt(product_id);
-
   const data = useLoaderData();
-  const prodData = data.find((item) => item.product_id === id);
+
+  const [specificData, setSpecificData] = useState({});
+  const [alreadyExists, setAlreadyExists] = useState(false);
+
+  useEffect(() => {
+    const singleData = data.find((item) => item.product_id === id);
+    console.log(singleData);
+    setSpecificData(singleData);
+    const existingWishIds = theWishListIdHolder();
+    const find = existingWishIds.find((jinish) => jinish === id);
+    if (find) {
+      setAlreadyExists(true);
+    }
+  }, []);
 
   const handleAddToCart = (id) => {
     addingIdToCart(id);
-    toast.success('Item Added to your Cart', {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      });
   };
 
   const handleAddToWishList = (id) => {
     addingIdtoWishList(id);
-    toast.success('Added Item to your Wishlist', {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      });
+    setAlreadyExists(true);
   };
-  
-  const handleDisabled = (event) => {
-    disableOnClick(event);
-  }
 
   const {
     product_image,
@@ -54,7 +47,7 @@ const ProductDetails = () => {
     description,
     specification,
     rating,
-  } = prodData;
+  } = specificData;
 
   return (
     <div>
@@ -148,8 +141,13 @@ const ProductDetails = () => {
                 </svg>
               </button>
               <button
-                onClick={(event) => {handleAddToWishList(id); handleDisabled(event)}}
-                className="bg-white text-pink-700 rounded-full p-2 border-2 border-primPink hover:bg-primPink hover:text-white transition-colors"
+                disabled={alreadyExists}
+                onClick={() => handleAddToWishList(id)}
+                className={
+                  alreadyExists === true
+                    ? "rounded-full p-2 border-2 border-black text-black opacity-35"
+                    : "bg-white text-pink-700 rounded-full p-2 border-2 border-primPink hover:bg-primPink hover:text-white transition-colors"
+                }
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

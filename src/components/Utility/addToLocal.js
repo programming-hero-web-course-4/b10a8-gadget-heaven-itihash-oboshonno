@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const theCartIdHolder = () => {
     const storedListStr = localStorage.getItem('cart'); // add kora string ta nilam local theke
     if (storedListStr) {
@@ -13,6 +15,16 @@ const addingIdToCart = (id) => {
     existingList.push(id);
     const storedListStr = JSON.stringify(existingList);
     localStorage.setItem('cart', storedListStr);
+    toast.success('Item Added to your Cart!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
 }
 
 const theWishListIdHolder = () => {
@@ -28,11 +40,30 @@ const theWishListIdHolder = () => {
 const addingIdtoWishList = (id) => {
     const existingList = theWishListIdHolder();
     if (existingList.includes(id)) {
-        alert("This product already exists in your Wishlist!");
+        toast.error('This product already exists in your Wishlist!', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     } else {
         existingList.push(id);
         const storedListStr = JSON.stringify(existingList);
         localStorage.setItem('wish-list', storedListStr);
+        toast.success('Added Item to your Wishlist!', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
     
 }
@@ -63,9 +94,6 @@ const removingIdFromWishList = (id) => {
     }
 }
 
-const disableOnClick = (event) => {
-    event.target.disabled = true;
-}
 
 
-export { addingIdToCart, addingIdtoWishList, theCartIdHolder, theWishListIdHolder, removingIdFromCart, removingIdFromWishList, disableOnClick }
+export { addingIdToCart, addingIdtoWishList, theCartIdHolder, theWishListIdHolder, removingIdFromCart, removingIdFromWishList }
