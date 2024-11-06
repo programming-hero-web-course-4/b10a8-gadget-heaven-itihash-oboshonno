@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import WishItem from "../WishItem/WishItem";
-import { theWishListIdHolder } from "../Utility/addToLocal";
+import { removingIdFromWishList, theWishListIdHolder } from "../Utility/addToLocal";
 import { useLoaderData } from "react-router-dom";
 
 const WishItems = () => {
   const allGadgets = useLoaderData();
   const [wishItems, setWishItems] = useState([]);
+
   useEffect(() => {
     const wishList = theWishListIdHolder();
     const wishListForShow = allGadgets.filter((item) =>
@@ -13,6 +14,15 @@ const WishItems = () => {
     );
     setWishItems(wishListForShow);
   }, [])
+
+  const handleRemove = (id) => {
+    removingIdFromWishList(id);
+    const wishList = theWishListIdHolder();
+    const wishListForShow = allGadgets.filter((item) =>
+      wishList.includes(item.product_id)
+    );
+    setWishItems(wishListForShow);
+  }
 
   return (
     <>
@@ -24,7 +34,7 @@ const WishItems = () => {
       </div>
       <div className="py-8 grid gap-5">
         {wishItems.map((item) => (
-          <WishItem key={item.product_id} item={item}></WishItem>
+          <WishItem key={item.product_id} item={item} handleRemove={handleRemove}></WishItem>
         ))}
       </div>
     </>

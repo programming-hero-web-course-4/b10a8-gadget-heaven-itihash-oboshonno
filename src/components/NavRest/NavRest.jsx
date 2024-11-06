@@ -44,17 +44,6 @@ const NavRest = () => {
     </>
   );
 
-  const [cartLength, setCartLength] = useState();
-  const [wishListLength, setWishListLength] = useState();
-
-  useEffect(() => {
-    const cartArray = theCartIdHolder();
-    setCartLength(cartArray.length);
-
-    const wishListArray = theWishListIdHolder();
-    setWishListLength(wishListArray.length);
-  }, []);
-
   return (
     <nav className="flex items-center justify-between mx-auto px-5 py-6 max-w-7xl">
       <div className="md:hidden">
@@ -94,9 +83,8 @@ const NavRest = () => {
         <ul className="flex items-center gap-10">{navItems}</ul>
       </div>
       <div className="flex items-center gap-3">
-        <Link to="/dashboard/cart">
-          <div>
-            <div className="bg-white rounded-full p-2 border">
+      <Link to="/dashboard/cart">
+        <div className="bg-white rounded-full p-2 border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -112,16 +100,9 @@ const NavRest = () => {
                 />
               </svg>
             </div>
-            <div className="relative bottom-10 left-3 md:bottom-12 md:left-4">
-              <p className={cartLength > 0 ? "text-[#b62424] text-xs md:text-sm font-medium bg-white flex justify-center rounded-full" : "text-transparent text-xs md:text-sm font-medium bg-transparent flex justify-center rounded-full"}>
-                {cartLength}
-              </p>
-            </div>
-          </div>
         </Link>
         <Link to="/dashboard/wishlist">
-          <div>
-            <div className="bg-white rounded-full p-2 border">
+        <div className="bg-white rounded-full p-2 border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -137,12 +118,6 @@ const NavRest = () => {
                 />
               </svg>
             </div>
-            <div className="relative bottom-10 left-3 md:bottom-12 md:left-4">
-              <p className={wishListLength > 0 ? "text-[#b62424] text-xs md:text-sm font-medium bg-white flex justify-center rounded-full" : "text-transparent text-xs md:text-sm font-medium bg-transparent flex justify-center rounded-full"}>
-                {wishListLength}
-              </p>
-            </div>
-          </div>
         </Link>
       </div>
     </nav>

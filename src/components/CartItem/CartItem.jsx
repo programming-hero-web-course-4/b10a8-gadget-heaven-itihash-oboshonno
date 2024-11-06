@@ -1,12 +1,5 @@
-import { removingIdFromCart } from "../Utility/addToLocal";
-
-const CartItem = ({ item }) => {
+const CartItem = ({ item, handleRemove }) => {
   const { product_id, product_image, product_title, description, price } = item;
-
-  const handleRemoveFromCart = (id) => {
-    removingIdFromCart(id);
-  }
-
   return (
     <div className="flex items-center justify-between bg-white p-5 rounded-2xl shadow-lg">
       <div className="flex items-center gap-6">
@@ -24,7 +17,7 @@ const CartItem = ({ item }) => {
         </div>
       </div>
       <div>
-        <button onClick={() => handleRemoveFromCart(product_id)}>
+        <button onClick={() => handleRemove(product_id)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -28,9 +28,9 @@ const addingIdToCart = (id) => {
 }
 
 const theWishListIdHolder = () => {
-    const storedListStr = localStorage.getItem('wish-list');
+    const storedListStr = localStorage.getItem('wish-list'); // add kora string ta nilam local theke
     if (storedListStr) {
-        const storedList = JSON.parse(storedListStr);
+        const storedList = JSON.parse(storedListStr); // string ta ke abar json obj banalam
         return storedList;
     } else {
         return [];
@@ -77,6 +77,16 @@ const removingIdFromCart = (id) => {
             checkCart.splice(index, 1);
             const storedListStr = JSON.stringify(checkCart);
             localStorage.setItem('cart', storedListStr);
+            toast.info('Item Removed from your Cart!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }
     }
 }
@@ -90,6 +100,16 @@ const removingIdFromWishList = (id) => {
             checkWish.splice(index, 1);
             const storedListStr = JSON.stringify(checkWish);
             localStorage.setItem('wish-list', storedListStr);
+            toast.info('Item Removed from your Wishlist!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }
     }
 }

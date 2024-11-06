@@ -7,8 +7,6 @@ export default function Stars({rating}) {
   useEffect(() => {
     if (rating) {
       setGotRating(rating);
-    } else {
-      console.log("hahaha mara khao");
     }
   }, [])
 

@@ -22,7 +22,6 @@ const ProductDetails = () => {
 
   useEffect(() => {
     const singleData = data.find((item) => item.product_id === id);
-    console.log(singleData);
     setSpecificData(singleData);
     setSpecici(singleData.specification);
     const existingWishIds = theWishListIdHolder();
