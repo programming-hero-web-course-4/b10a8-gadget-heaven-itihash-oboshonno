@@ -49,7 +49,7 @@ const WishItems = () => {
       />
       <div>
         <div>
-          <p className="text-2xl font-bold text-primBlack">Wishlist</p>
+          <p className="text-xl md:text-2xl font-bold text-primBlack">Wishlist</p>
         </div>
         <div></div>
       </div>

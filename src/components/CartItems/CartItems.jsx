@@ -64,7 +64,7 @@ const CartItems = () => {
   };
 
   pageTitle({
-    "/dashboard/cart" : "Cart | Gadget Heaven"
+    "/dashboard/cart": "Cart | Gadget Heaven",
   });
 
   return (
@@ -81,41 +81,47 @@ const CartItems = () => {
         pauseOnHover={false}
         theme="colored"
       />
-      <div className="flex justify-between items-center">
+      <div className="md:flex justify-between items-center">
         <div>
-          <p className="text-2xl font-bold text-primBlack">Cart</p>
+          <p className="text-xl md:text-2xl font-bold text-primBlack">Cart</p>
         </div>
-        <div className="flex flex-col md:flex-row items-center gap-5">
-          <p className="font-bold text-2xl">Total Price: {totalPrice} $</p>
-          <button
-            onClick={handleSort}
-            className="flex items-center font-semibold text-primPink bg-gray-100 border-2 border-primPink px-6 py-2 rounded-full hover:bg-primPink hover:text-white transition-colors"
-          >
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
-                />
-              </svg>
-            </span>
-            Sort by Price
-          </button>
-          <button
-            disabled={cartItems.length < 1}
-            onClick={purchase}
-            className={cartItems.length < 1 ? "font-semibold bg-gray-300 text-white border-2 border-gray-300 px-6 py-2 rounded-full" : "font-semibold bg-primPink text-white border-2 border-primPink px-6 py-2 rounded-full hover:bg-[#a62ff2] hover:border-[#a62ff2] transition-colors"}
-          >
-            Purchase
-          </button>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+          <p className="font-bold md:text-2xl">Total Price: {totalPrice} $</p>
+          <div className="flex gap-3 md:gap-5 items-center">
+            <button
+              onClick={handleSort}
+              className="flex items-center font-semibold text-primPink bg-gray-100 border-2 border-primPink px-6 py-2 rounded-full hover:bg-primPink hover:text-white transition-colors"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
+                  />
+                </svg>
+              </span>
+              Sort by Price
+            </button>
+            <button
+              disabled={cartItems.length < 1}
+              onClick={purchase}
+              className={
+                cartItems.length < 1
+                  ? "font-semibold bg-gray-300 text-white border-2 border-gray-300 px-6 py-2 rounded-full"
+                  : "font-semibold bg-primPink text-white border-2 border-primPink px-6 py-2 rounded-full hover:bg-[#a62ff2] hover:border-[#a62ff2] transition-colors"
+              }
+            >
+              Purchase
+            </button>
+          </div>
         </div>
       </div>
       <div className="py-8 grid gap-5">

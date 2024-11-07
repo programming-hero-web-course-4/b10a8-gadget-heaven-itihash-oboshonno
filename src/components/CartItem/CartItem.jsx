@@ -11,9 +11,9 @@ const CartItem = ({ item, handleRemove }) => {
           />
         </div>
         <div className="grid gap-4 text-primBlack">
-          <p className="font-semibold text-2xl">{product_title}</p>
-          <p className="opacity-60">{description}</p>
-          <p className="text-lg font-semibold opacity-80">${price}</p>
+          <p className="font-semibold md:text-2xl">{product_title}</p>
+          <p className="opacity-60 text-xs md:text-base">{description}</p>
+          <p className="md:text-lg font-semibold opacity-80">${price}</p>
         </div>
       </div>
       <div>

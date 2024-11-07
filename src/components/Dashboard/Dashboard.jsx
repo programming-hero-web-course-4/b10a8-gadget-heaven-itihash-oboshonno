@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div>
       <div className="bg-primPink py-16 text-white text-center grid gap-6 px-5">
-        <h3 className="text-3xl font-bold">Dashboard</h3>
+        <h3 className="text-2xl md:text-3xl font-bold">Dashboard</h3>
         <p>
           Welcome to Gadget Heaven's dashboard. Buy your cart items or check
           your wish-list from here.
@@ -16,8 +16,8 @@ const Dashboard = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "bg-white border-2 border-white text-primPink text-xl font-bold px-6 py-3 rounded-full"
-                : "bg-primPink border-2 border-white text-white text-xl px-6 py-3 rounded-full"
+                ? "bg-white border-2 border-white text-primPink md:text-xl font-bold px-6 py-3 rounded-full"
+                : "bg-primPink border-2 border-white text-white md:text-xl px-6 py-3 rounded-full"
             }
             to="/dashboard/cart"
           >
@@ -26,8 +26,8 @@ const Dashboard = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "bg-white border-2 border-white text-primPink text-xl font-bold px-6 py-3 rounded-full"
-                : "bg-primPink border-2 border-white text-white text-xl px-6 py-3 rounded-full"
+                ? "bg-white border-2 border-white text-primPink md:text-xl font-bold px-6 py-3 rounded-full"
+                : "bg-primPink border-2 border-white text-white md:text-xl px-6 py-3 rounded-full"
             }
             to="/dashboard/wishlist"
           >

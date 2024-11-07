@@ -82,7 +82,7 @@ const ProductDetails = () => {
         theme="colored"
       />
       <div className="bg-primPink pt-16 pb-80 text-white text-center grid gap-6 px-5">
-        <h3 className="text-3xl font-bold">Product Details</h3>
+        <h3 className="text-2xl md:text-3xl font-bold">Product Details</h3>
         <p>
           Welcome to Gadget Heaven's product details page. Check out the full
           information about the product you may want to buy or add to your
@@ -100,10 +100,10 @@ const ProductDetails = () => {
           </div>
           <div className="text-primBlack grid gap-5">
             <div>
-              <h4 className="text-2xl font-semibold">{product_title}</h4>
+              <h4 className="text-xl md:text-2xl font-semibold">{product_title}</h4>
             </div>
             <div>
-              <p className="text-xl font-semibold opacity-80">
+              <p className="md:text-xl font-semibold opacity-80">
                 Price: {price}$
               </p>
             </div>
@@ -111,10 +111,10 @@ const ProductDetails = () => {
               {availability ? <InStock></InStock> : <OutStock></OutStock>}
             </div>
             <div>
-              <p className="text-lg opacity-80">{description}</p>
+              <p className="md:text-lg opacity-80">{description}</p>
             </div>
             <div className="grid gap-2">
-              <p className="font-bold text-lg">Specifications:</p>
+              <p className="font-bold md:text-lg">Specifications:</p>
               <div>
                 <ul className="grid gap-1">
                   {specici.map((spec, index) => (
@@ -124,7 +124,7 @@ const ProductDetails = () => {
               </div>
             </div>
             <div>
-              <p className="font-bold text-lg">Rating</p>
+              <p className="font-bold md:text-lg">Rating</p>
               <div className="flex items-center gap-4">
                 <Stars specificData={specificData}></Stars>
                 <div className="px-4 py-1 bg-gray-100 rounded-full">
@@ -140,7 +140,7 @@ const ProductDetails = () => {
             >
               <button
                 onClick={() => handleAddToCart(id)}
-                className="flex gap-3 items-center text-lg font-semibold px-6 py-2 rounded-full border-2 border-primPink text-primPink hover:border-2 hover:border-primPink hover:bg-primPink hover:text-white transition-colors"
+                className="flex gap-3 items-center md:text-lg font-semibold px-6 py-2 rounded-full border-2 border-primPink text-primPink hover:border-2 hover:border-primPink hover:bg-primPink hover:text-white transition-colors"
               >
                 <p>Add to Cart</p>
                 <svg
@@ -173,7 +173,7 @@ const ProductDetails = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="size-7"
+                  className="size-6 md:size-7"
                 >
                   <path
                     strokeLinecap="round"

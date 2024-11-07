@@ -22,7 +22,7 @@ const Home = () => {
         <div>
           <h2
             id="explore"
-            className="text-4xl font-bold text-primBlack grid justify-center text-center"
+            className="text-2xl md:text-4xl font-bold text-primBlack grid justify-center text-center"
           >
             Explore Cutting-Edge Gadgets
           </h2>

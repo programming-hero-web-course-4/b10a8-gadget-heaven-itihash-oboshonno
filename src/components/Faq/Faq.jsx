@@ -7,7 +7,7 @@ const Faq = () => {
   return (
     <div>
       <div className="bg-primPink py-16 text-white text-center grid gap-6 px-5">
-        <h3 className="text-3xl font-bold">
+        <h3 className="text-2xl md:text-3xl font-bold">
           Frequently Asked Questions (FAQs)
         </h3>
         <p>The most asked questions we get are answered here.</p>
