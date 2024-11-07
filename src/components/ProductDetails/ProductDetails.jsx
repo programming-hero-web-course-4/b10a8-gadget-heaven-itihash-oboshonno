@@ -126,7 +126,7 @@ const ProductDetails = () => {
             <div>
               <p className="font-bold text-lg">Rating</p>
               <div className="flex items-center gap-4">
-                <Stars rating={rating}></Stars>
+                <Stars specificData={specificData}></Stars>
                 <div className="px-4 py-1 bg-gray-100 rounded-full">
                   <p className="font-medium text-primBlack opacity-80">
                     {rating}
