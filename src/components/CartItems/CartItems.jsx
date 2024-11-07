@@ -3,7 +3,7 @@ import CartItem from "../CartItem/CartItem";
 import { removingIdFromCart, theCartIdHolder } from "../Utility/addToLocal";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import paymentImg from "../../../public/complete.png";
+import paymentImg from "../../assets/complete.png";
 
 const CartItems = () => {
   const allGadgets = useLoaderData();
@@ -105,8 +105,9 @@ const CartItems = () => {
             Sort by Price
           </button>
           <button
+            disabled={cartItems.length < 1}
             onClick={purchase}
-            className="font-semibold bg-primPink text-white border-2 border-primPink px-6 py-2 rounded-full hover:bg-[#a62ff2] hover:border-[#a62ff2] transition-colors"
+            className={cartItems.length < 1 ? "font-semibold bg-gray-300 text-white border-2 border-gray-300 px-6 py-2 rounded-full" : "font-semibold bg-primPink text-white border-2 border-primPink px-6 py-2 rounded-full hover:bg-[#a62ff2] hover:border-[#a62ff2] transition-colors"}
           >
             Purchase
           </button>
@@ -136,7 +137,10 @@ const CartItems = () => {
               <div className="modal-action flex justify-center">
                 <form method="dialog">
                   {/* if there is a button in form, it will close the modal */}
-                  <button onClick={() => navigate('/')} className="px-6 py-2 font-semibold rounded-xl bg-gray-100 text-primBlack hover:bg-gray-300">
+                  <button
+                    onClick={() => navigate("/")}
+                    className="px-6 py-2 font-semibold rounded-xl bg-gray-100 text-primBlack hover:bg-gray-300"
+                  >
                     Close
                   </button>
                 </form>
