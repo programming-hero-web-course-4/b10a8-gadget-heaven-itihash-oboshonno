@@ -6,6 +6,7 @@ import {
 } from "../Utility/addToLocal";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { pageTitle } from "../Utility/customTabNames";
 
 const WishItems = () => {
   const allGadgets = useLoaderData();
@@ -27,6 +28,10 @@ const WishItems = () => {
     );
     setWishItems(wishListForShow);
   };
+
+  pageTitle({
+    "/dashboard/wishlist" : "Wishlist | Gadget Heaven"
+  });
 
   return (
     <>

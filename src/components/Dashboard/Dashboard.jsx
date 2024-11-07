@@ -1,5 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { pageTitle } from "../Utility/customTabNames";
 const Dashboard = () => {
+  pageTitle({
+    "/dashboard" : "Dashboard | Gadget Heaven"
+  });
   return (
     <div>
       <div className="bg-primPink py-16 text-white text-center grid gap-6 px-5">

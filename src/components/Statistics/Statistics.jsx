@@ -1,4 +1,9 @@
+import { pageTitle } from "../Utility/customTabNames";
+
 const Statistics = () => {
+  pageTitle({
+    "/statistics" : "Statistics | Gadget Heaven"
+  });
   return (
     <div>
       <div className="bg-primPink py-16 text-white text-center grid gap-6 px-5">

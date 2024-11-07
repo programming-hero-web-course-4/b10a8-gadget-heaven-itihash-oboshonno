@@ -1,9 +1,20 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ExploreBtns from "../ExploreBtns/ExploreBtns";
+import { pageTitle } from "../Utility/customTabNames";
 
 const Home = () => {
   const categories = useLoaderData();
+  pageTitle({
+    "/" : "Gadget Heaven",
+    "/category/All%20Products" : "All Products | Gadget Heaven",
+    "/category/Laptops" : "Laptops | Gadget Heaven",
+    "/category/Accessories" : "Accessories | Gadget Heaven",
+    "/category/Appliances" : "Appliances | Gadget Heaven",
+    "/category/Televisions" : "Televisions | Gadget Heaven",
+    "/category/Phones": "Phones | Gadget Heaven",
+    "/category/Vehicles" : "Vehicles | Gadget Heaven",
+  });
   return (
     <div className="max-w-full mx-auto">
       <Banner></Banner>

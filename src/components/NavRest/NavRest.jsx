@@ -31,7 +31,7 @@ const NavRest = () => {
       </li>
       <li>
         <NavLink
-          to="/dashboard"
+          to="/dashboard/cart"
           className={({ isActive }) =>
             isActive
               ? "text-primBlack opacity-80 font-bold underline"

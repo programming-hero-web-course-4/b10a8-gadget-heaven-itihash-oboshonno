@@ -10,8 +10,10 @@ import Stars from "../Rating/Rating";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useEffect, useState } from "react";
+import { pageTitle } from "../Utility/customTabNames";
 
 const ProductDetails = () => {
+
   const { product_id } = useParams();
   const id = parseInt(product_id);
   const data = useLoaderData();
@@ -41,6 +43,29 @@ const ProductDetails = () => {
   };
 
   const { product_image, product_title, price, availability, description, rating, } = specificData;
+
+  pageTitle({
+    "/product/101": "Product Details | Gadget Heaven",
+    "/product/102": "Product Details | Gadget Heaven",
+    "/product/104": "Product Details | Gadget Heaven",
+    "/product/105": "Product Details | Gadget Heaven",
+    "/product/107": "Product Details | Gadget Heaven",
+    "/product/108": "Product Details | Gadget Heaven",
+    "/product/110": "Product Details | Gadget Heaven",
+    "/product/111": "Product Details | Gadget Heaven",
+    "/product/112": "Product Details | Gadget Heaven",
+    "/product/113": "Product Details | Gadget Heaven",
+    "/product/114": "Product Details | Gadget Heaven",
+    "/product/115": "Product Details | Gadget Heaven",
+    "/product/116": "Product Details | Gadget Heaven",
+    "/product/117": "Product Details | Gadget Heaven",
+    "/product/118": "Product Details | Gadget Heaven",
+    "/product/119": "Product Details | Gadget Heaven",
+    "/product/120": "Product Details | Gadget Heaven",
+    "/product/121": "Product Details | Gadget Heaven",
+    "/product/122": "Product Details | Gadget Heaven",
+    "/product/123": "Product Details | Gadget Heaven",
+  });
 
   return (
     <div>

@@ -4,6 +4,7 @@ import { removingIdFromCart, theCartIdHolder } from "../Utility/addToLocal";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import paymentImg from "../../assets/complete.png";
+import { pageTitle } from "../Utility/customTabNames";
 
 const CartItems = () => {
   const allGadgets = useLoaderData();
@@ -61,6 +62,10 @@ const CartItems = () => {
     );
     setTotalPrice(Number(jogPhol.toFixed(2)));
   };
+
+  pageTitle({
+    "/dashboard/cart" : "Cart | Gadget Heaven"
+  });
 
   return (
     <>

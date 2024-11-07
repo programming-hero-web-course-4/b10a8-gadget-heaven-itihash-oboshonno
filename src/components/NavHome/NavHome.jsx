@@ -31,7 +31,7 @@ const NavHome = () => {
       </li>
       <li>
         <NavLink
-          to="/dashboard"
+          to="/dashboard/cart"
           className={({ isActive }) =>
             isActive
               ? "text-white font-bold underline"
