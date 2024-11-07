@@ -1,4 +1,4 @@
-import bannerImg from '/banner.jpg'
+import bannerImg from '../../assets/banner.jpg'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Banner = () => {

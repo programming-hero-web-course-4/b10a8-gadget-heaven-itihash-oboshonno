@@ -41,6 +41,18 @@ const NavHome = () => {
           Dashboard
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/faq"
+          className={({ isActive }) =>
+            isActive
+              ? "text-white font-bold underline"
+              : "text-white font-medium"
+          }
+        >
+          FAQs
+        </NavLink>
+      </li>
     </>
   );
 

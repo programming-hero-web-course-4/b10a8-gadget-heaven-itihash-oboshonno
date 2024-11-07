@@ -41,6 +41,18 @@ const NavRest = () => {
           Dashboard
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/faq"
+          className={({ isActive }) =>
+            isActive
+              ? "text-primBlack opacity-80 font-bold underline"
+              : "text-primBlack opacity-70 font-medium"
+          }
+        >
+          FAQs
+        </NavLink>
+      </li>
     </>
   );
 

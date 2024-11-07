@@ -12,6 +12,7 @@ import CartItems from './components/CartItems/CartItems';
 import WishItems from './components/WishItems/WishItems';
 import ExploreBtns from './components/ExploreBtns/ExploreBtns';
 import ExploreCntnt from './components/ExploreCntnt/ExploreCntnt';
+import Faq from './components/Faq/Faq';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             loader: () => fetch('../gadgetsData.json')
           }
         ]
+      },
+      {
+        path: "/faq",
+        element: <Faq></Faq>
       },
       {
         path: "/product/:product_id",
